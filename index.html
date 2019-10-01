@@ -104,7 +104,7 @@
     if (document.cookie.split(";").includes("splashSeen=true")) {
       document.location.replace("is-ready-for-ev-charging.html")
     } else {
-      document.cookie = "splashSeen=true; SameSite=Strict";
+      document.cookie = "splashSeen=true; SameSite=Strict; Max-Age=3600";
     }
   });
 </script>
