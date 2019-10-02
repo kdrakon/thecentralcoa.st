@@ -2,6 +2,9 @@ body {
     background-color: white;
     animation-duration: 1000ms;
     animation-name: background-fade-in;
+    border: 0;
+    margin: 5rem 0;
+    font-family: 'Livvic', sans-serif;
 }
 
 @keyframes background-fade-in {
@@ -12,3 +15,56 @@ body {
         background-color: white;
     }
 }
+
+header {
+    margin: auto;
+    background-color: darkgreen;
+    height: 30rem;
+    padding: 3rem;
+}
+
+.header-banner {
+    color: white;
+    font-size: 3rem;
+    font-weight: lighter;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 10px 0px 20px yellow;
+    animation-name: header-banner-flash;
+    animation-iteration-count: infinite;
+    animation-duration: 30s;
+    animation-direction: alternate;
+}
+
+@keyframes header-banner-flash {
+    from {
+        text-shadow: 10px 0px 20px yellow;
+    }
+    50% {
+        text-shadow: 12px 0px 15px #009CD1
+    }
+    to {
+        text-shadow: 20px 0px 5px #48C353;
+    }
+}
+
+article {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 90%;
+    margin: auto;
+}
+
+h2 {
+    width: 25%;
+    padding: 0 5%;
+    text-align: right;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+article section {
+    width: 30%;
+    padding: 1%;
+}
+
