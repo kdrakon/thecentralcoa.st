@@ -1,6 +1,6 @@
 body {
     background-color: white;
-    animation-duration: 1000ms;
+    animation-duration: 1500ms;
     animation-name: background-fade-in;
     border: 0;
     margin: 5rem 0;
@@ -9,7 +9,7 @@ body {
 
 @keyframes background-fade-in {
     from {
-        background-color: black;
+        background-color: #7A7093;
     }
     to {
         background-color: white;
@@ -18,9 +18,10 @@ body {
 
 header {
     margin: auto;
-    background-color: darkgreen;
-    height: 30rem;
+    height: 50rem;
     padding: 3rem;
+    background-image: url('images/temp_banner.jpeg');
+    background-size: cover;
 }
 
 .header-banner {
@@ -28,22 +29,22 @@ header {
     font-size: 3rem;
     font-weight: lighter;
     font-family: 'Press Start 2P', cursive;
-    text-shadow: 10px 0px 20px yellow;
-    animation-name: header-banner-flash;
+    text-shadow: 10px 0px 20px #48C353;
+    animation-name: header-banner-glow;
     animation-iteration-count: infinite;
     animation-duration: 30s;
     animation-direction: alternate;
 }
 
-@keyframes header-banner-flash {
+@keyframes header-banner-glow {
     from {
-        text-shadow: 10px 0px 20px yellow;
+        text-shadow: 10px 0px 20px #48C353;
     }
     50% {
         text-shadow: 12px 0px 15px #009CD1
     }
     to {
-        text-shadow: 20px 0px 5px #48C353;
+        text-shadow: 15px 0px 5px #48C353;
     }
 }
 
@@ -67,4 +68,3 @@ article section {
     width: 30%;
     padding: 1%;
 }
-
