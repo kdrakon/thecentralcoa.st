@@ -9,7 +9,7 @@
       font-family: 'Press Start 2P', cursive;
       background-color: black;
       color: white;
-      animation-duration: 10s;
+      animation-duration: 5s;
       animation-name: body-fade;
     }
 
@@ -18,8 +18,8 @@
         background-color: black;
       }
 
-      25% {
-        background-color: #009CD1;
+      50% {
+        background-color: #7A7093;
       }
 
       to {
@@ -28,13 +28,17 @@
     }
 
     div.splash {
-      color: #48C353;
-      text-shadow: -3px 0px 25px #009CD1;
+      color: white;
+      text-shadow: -2px 0px 10px #48C353;
       font-size: 4.25rem;
-      width: 75%;
+      background-color: #7A7093;
+      padding: 4rem;
+      padding-left: 8rem;
+      width: 100%;
       margin: auto;
-      margin-top: 25%;
-      animation-duration: 5s;
+      margin-top: 15%;
+      animation-duration: 10s;
+      animation-timing-function: linear;
       animation-name: splash;
     }
 
@@ -42,19 +46,25 @@
       from {
         color: black;
         text-shadow: none;
-        font-size: 4.5rem;
+        font-size: 4.27rem;
+        background-color: inherit;
+        padding-left: 12rem;
       }
 
       50% {
-        color: white;
-        text-shadow: 20px 0px 50px black;
-        font-size: 4rem;
+        color: #7A7093;
+        text-shadow: 5px 0px 20px #48C353;
+        font-size: 4.26rem;
+        background-color: rgba(122, 112, 147, 0.1);
+        padding-left: 9rem;
       }
 
       to {
-        color: #48C353;
-        text-shadow: -3px 0px 25px #009CD1;
+        color: white;
+        text-shadow: -2px 0px 10px #48C353;
         font-size: 4.25rem;
+        background-color: #7A7093;
+        padding-left: 8rem;
       }
     }
 
@@ -86,7 +96,7 @@
 </head>
 
 <body>
-  <div class="splash">
+  <div class="splash" onclick="go();">
     The<br>
     Central Coast<br>
     is<br>
@@ -100,11 +110,15 @@
 </html>
 
 <script type="text/javascript">
+
+  var go = () => document.location.replace("is-ready-for-ev-charging.html");
+
   document.addEventListener("DOMContentLoaded", () => {
     if (document.cookie.split(";").includes("splashSeen=true")) {
-      document.location.replace("is-ready-for-ev-charging.html")
+      go();
     } else {
       document.cookie = "splashSeen=true; SameSite=Strict; Max-Age=3600";
     }
   });
+
 </script>
